@@ -4,3 +4,4 @@
 
 ## 내용
 - [day1](https://github.com/CocoIsCat/SpringBoot-review/tree/master/day1)
+- [day2](https://github.com/CocoIsCat/SpringBoot-review/tree/master/day2)
