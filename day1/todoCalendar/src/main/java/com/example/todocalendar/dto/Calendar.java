@@ -19,4 +19,19 @@ public class Calendar {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Calendar calendar = (Calendar) o;
+
+        return date.equals(calendar.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return date.hashCode();
+    }
 }
