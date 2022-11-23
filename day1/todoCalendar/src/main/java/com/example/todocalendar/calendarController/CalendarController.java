@@ -18,7 +18,9 @@ public class CalendarController {
 
     @GetMapping("put/schedule")
     public ArrayList<Calendar> putSchedule(Calendar calendar) {
-        todoCalendar.add(calendar);
+        if (!todoCalendar.contains(calendar)) {
+            todoCalendar.add(calendar);
+        }
         return todoCalendar;
     }
 }
