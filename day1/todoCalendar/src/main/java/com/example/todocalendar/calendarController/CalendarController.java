@@ -15,4 +15,10 @@ public class CalendarController {
     public ArrayList<Calendar> allSchedule() {
         return todoCalendar;
     }
+
+    @GetMapping("put/schedule")
+    public ArrayList<Calendar> putSchedule(Calendar calendar) {
+        todoCalendar.add(calendar);
+        return todoCalendar;
+    }
 }
