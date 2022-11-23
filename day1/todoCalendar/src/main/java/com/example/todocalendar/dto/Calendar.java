@@ -1,6 +1,6 @@
 package com.example.todocalendar.dto;
 
-public class DTO {
+public class Calendar {
     private String date;
     private String title;
 
