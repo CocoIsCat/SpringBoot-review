@@ -21,7 +21,6 @@ public class LoginController {
     @PostMapping("/login")
     public String login(HttpSession session, Member member) {
         login.login(member, session);
-        System.out.println(String.valueOf(session.getAttribute("email")));
         return "index";
     }
 }

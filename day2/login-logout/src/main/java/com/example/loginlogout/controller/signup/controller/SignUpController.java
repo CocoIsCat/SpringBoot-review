@@ -20,7 +20,6 @@ public class SignUpController {
     @PostMapping("/signup")
     public String signup(Member member) {
         signUp.join(member);
-        System.out.println("회원가입 성공!");
         return "index";
     }
 }
