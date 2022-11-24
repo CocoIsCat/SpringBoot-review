@@ -10,4 +10,14 @@ public class PageController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/goSignUp")
+    public String goSignup() {
+        return "signup";
+    }
+
+    @GetMapping("/goLogin")
+    public String goLogin() {
+        return "login";
+    }
 }
