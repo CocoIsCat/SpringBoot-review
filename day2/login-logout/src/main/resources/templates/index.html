@@ -109,7 +109,8 @@
 
 <div class="container">
     <div class="box">
-      <h1 style="font-size: 35px;color: white;">간단 사이트</h1>
+      <h1 style="font-size: 35px;color: white;" th:if="${session.get('email') == null}">간단 사이트</h1>
+        <h1 style="font-size: 35px;color: white;" th:if="${session.get('email') != null}" th:text="${session.get('email')}"></h1>
     </div>
 
     <div class="box">
