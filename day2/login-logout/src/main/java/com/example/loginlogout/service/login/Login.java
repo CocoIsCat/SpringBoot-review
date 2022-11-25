@@ -29,4 +29,11 @@ public class Login {
     public void addSession(HttpSession session, Member member) {
         session.setAttribute("email", member.getEmail());
     }
+
+    public boolean checkLogin(HttpSession session) {
+        if (session.getAttribute("email") != null)
+            return true;
+        else
+            return false;
+    }
 }
