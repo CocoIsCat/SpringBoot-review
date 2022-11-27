@@ -14,14 +14,18 @@ public class ChatRepository {
     public void save(String ch, HttpSession session) {
         ArrayList<String> chat = new ArrayList<>();
 
-        String nickName=String.valueOf(session.getAttribute("nickName"));
+        String nickName = String.valueOf(session.getAttribute("nickName"));
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
 
-        chat.add(String.valueOf(session.getAttribute("nickName")));
+        chat.add(nickName);
         chat.add(ch);
         chat.add(dtf.format(now));
 
         storage.add(chat);
+    }
+
+    public ArrayList<ArrayList<String>> msg() {
+        return storage;
     }
 }
